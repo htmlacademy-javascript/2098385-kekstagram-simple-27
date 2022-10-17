@@ -1,4 +1,4 @@
-function getRandomPositiveInteger (a,b) {
+const getRandomPositiveInteger = (a,b)=> {
   if (a < 0 || b < 0) {
     return NaN;
   }
@@ -9,7 +9,7 @@ function getRandomPositiveInteger (a,b) {
   return Math.floor(result);
 }
 
-function checkStringLength (string, length) {
+const checkStringLength = (string, length)=> {
   return string.length <= length;
 }
 
