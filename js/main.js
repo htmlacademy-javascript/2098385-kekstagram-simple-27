@@ -9,7 +9,7 @@ const getRandomPositiveInteger = (a,b)=> {
   return Math.floor(result);
 };
 
-const checkStringLength = (string, length)=> {return string.length <= length;};
+const checkStringLength = (string, length)=> return string.length <= length;
 
 getRandomPositiveInteger(1,0);
 checkStringLength('',140);
