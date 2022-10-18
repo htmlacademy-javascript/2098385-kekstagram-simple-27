@@ -52,14 +52,14 @@ const checkStringLength = (string, length)=> string.length <= length;
 const getRandomArrayElement = (elements) => elements[getRandomPositiveInteger(0, elements.length - 1)];
 
 const CreateObject = (_item, index) => ({
-    id:  index + 1,
-    url: `photos/${index + 1}.jpg`,
-    description: getRandomArrayElement(DESC),
-    likes: getRandomPositiveInteger(LIKES.MIN, LIKES.MAX),
-    comments: getRandomPositiveInteger(COMMENTS),
+  id:  index + 1,
+  url: `photos/${index + 1}.jpg`,
+  description: getRandomArrayElement(DESC),
+  likes: getRandomPositiveInteger(LIKES.MIN, LIKES.MAX),
+  comments: getRandomPositiveInteger(COMMENTS),
 });
 
 const CreateArray = Array.from({length: ID}, CreateObject);
 
 checkStringLength ('', 200);
-CreateArray()
+CreateArray();
