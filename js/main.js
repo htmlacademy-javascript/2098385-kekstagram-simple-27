@@ -1,7 +1,7 @@
 
 const ID = 25;
 
-const DESC = [
+const DESCRIPTIONS = [
   'Я и пальма',
   'Мы, пацаны, не обижаемся — мы делаем выводы!',
   'Хватит думать сутками о человеке, который не задумывался о тебе даже на час',
@@ -29,7 +29,7 @@ const DESC = [
   'Улица – это сила',
 ];
 
-const LIKES = {
+const CountLikes = {
   MIN: 15,
   MAX: 200
 };
@@ -51,15 +51,12 @@ const checkStringLength = (string, length)=> string.length <= length;
 
 const getRandomArrayElement = (elements) => elements[getRandomPositiveInteger(0, elements.length - 1)];
 
-const CreateObject = (_item, index) => ({
+const createObject = (_item, index) => ({
   id:  index + 1,
   url: `photos/${index + 1}.jpg`,
-  description: getRandomArrayElement(DESC),
-  likes: getRandomPositiveInteger(LIKES.MIN, LIKES.MAX),
-  comments: getRandomPositiveInteger(COMMENTS),
+  description: getRandomArrayElement(DESCRIPTIONS),
+  likes: getRandomPositiveInteger(CountLikes.MIN, CountLikes.MAX),
+  comments: getRandomPositiveInteger(0, COMMENTS),
 });
 
-const CreateArray = Array.from({length: ID}, CreateObject);
-
-checkStringLength ('', 200);
-CreateArray();
+const createArray = Array.from({length: ID}, createObject);
