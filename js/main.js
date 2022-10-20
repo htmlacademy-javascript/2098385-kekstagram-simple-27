@@ -60,3 +60,6 @@ const createObject = (_item, index) => ({
 });
 
 const createArray = Array.from({length: ID}, createObject);
+
+checkStringLength ('', 200);
+createArray()
